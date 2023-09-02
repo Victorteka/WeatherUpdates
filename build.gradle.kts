@@ -2,4 +2,5 @@
 plugins {
     id("com.android.application") version "8.2.0-beta01" apply false
     id("org.jetbrains.kotlin.android") version "1.8.10" apply false
+    alias(libs.plugins.com.google.dagger.hilt.android) apply false
 }
