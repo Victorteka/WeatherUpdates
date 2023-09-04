@@ -23,6 +23,8 @@ object ClientModule {
     @Singleton
     internal fun provideJson() = Json { ignoreUnknownKeys = true }
 
+    @Provides
+    @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient, json: Json): Retrofit {
         val contentType = "application/json".toMediaType()
         return Retrofit.Builder()
